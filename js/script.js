@@ -7,7 +7,7 @@ var bottles={
 var request = $.ajax(bottles);
 request.done(function (response) {
 console.log(response);
-response.forEach()
+response.forEach(loadImage)
 })
 
 
