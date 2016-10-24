@@ -1,3 +1,14 @@
 .nav {
   width: 250px;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 20px;
+}
+
+li {
+  padding: 10px 0 10px 0
+}
+
+a {
+    
 }
