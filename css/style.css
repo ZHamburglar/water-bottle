@@ -17,4 +17,12 @@ div.thumbnail img{
 div.thumbnail {
    max-width:  286px;
    height: 350px;
+
+}
+
+div.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+
 }
