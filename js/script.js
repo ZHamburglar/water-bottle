@@ -2,18 +2,20 @@
 
 $(document).ready(function () {
 // loadImage()
+  $.ajax({
+    url:'http://localhost:3000/waterbottles'
+  }).done(function (response) {
+    console.log(response);
+    response.forEach(loadImage)
+  })
 })
-var bottles={
-  url:'http://localhost:3000/waterbottles'
-};
-var request = $.ajax(bottles);
-request.done(function (response) {
-console.log(response);
-response.forEach(loadImage)
-})
+
+
+
 
 
 function loadImage(bottle) {
+  console.log(bottle);
   // <div class="col-sm-6 col-md-4">
   //   <div class="thumbnail foo">
   //     <img src="http://placehold.it/275x125" alt="">
@@ -24,13 +26,14 @@ function loadImage(bottle) {
   //     </div>
   //   </div>
   // </div>
+  console.log("This is the array");
   var columnDiv =$('<div />')
   columnDiv.addClass('col-sm-6 col-md-4')
   var thumbnailDiv= $('<div />')
   thumbnailDiv.addClass('thumbnail foo')
 
   var img = $('<img />')
-  img.attr('src', 'http://placehold.it/275x125')
+  img.attr('src', 'http://localhost:3000/images/'+ bottle.imageName )
 
   var captionDiv=$('<div />')
   captionDiv.addClass('caption')
@@ -43,8 +46,8 @@ function loadImage(bottle) {
   p.append(bottle.phLevel)
 
   var p2= $('<p />')
-  p.append('<strong>Cost: </strong>$')
-  p.append(bottle.cost)
+  p2.append('<strong>Cost: </strong>$')
+  p2.append(bottle.cost)
 
 
   captionDiv.append(heading)
@@ -55,5 +58,5 @@ function loadImage(bottle) {
   thumbnailDiv.append(captionDiv)
 
   columnDiv.append(thumbnailDiv)
-
+  $("#waterbottles").append(columnDiv)
 }
