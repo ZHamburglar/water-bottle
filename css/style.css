@@ -6,5 +6,15 @@
 }
 
 li {
-  padding: 10px 0 10px 0
+  padding: 10px 0 10px 0;
+}
+
+div.thumbnail img{
+   max-height: 230px;
+   max-width:  230px;
+}
+
+div.thumbnail {
+   max-width:  286px;
+   height: 350px;
 }
