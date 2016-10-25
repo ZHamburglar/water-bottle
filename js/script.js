@@ -16,16 +16,6 @@ $(document).ready(function () {
 
 function loadImage(bottle) {
   console.log(bottle);
-  // <div class="col-sm-6 col-md-4">
-  //   <div class="thumbnail foo">
-  //     <img src="http://placehold.it/275x125" alt="">
-  //     <div class="caption">
-  //       <h3>Dasani</h3>
-  //       <p><strong>ph level: </strong>7</p>
-  //       <p><strong>Cost: </strong>$3</p>
-  //     </div>
-  //   </div>
-  // </div>
   console.log("This is the array");
   var columnDiv =$('<div />')
   columnDiv.addClass('col-sm-6 col-md-4')
