@@ -1,9 +1,10 @@
 $(document).ready(function () {
   $('#sortBySelector').on('change', function() {
     console.log($(this).val());
+    $('#waterbottles').empty()
     loadBottles();
   });
-// loadImage()
+// loadImage();
 loadBottles();
 });
 
