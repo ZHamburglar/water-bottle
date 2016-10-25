@@ -1,17 +1,23 @@
-
-
 $(document).ready(function () {
+  $('#sortBySelector').on('change', function() {
+    console.log($(this).val());
+    loadBottles();
+  });
 // loadImage()
-  $.ajax({
-    url:'http://localhost:3000/waterbottles'
-  }).done(function (response) {
-    console.log(response);
-    response.forEach(loadImage)
-  })
+loadBottles();
+});
+
+function loadBottles(){
+$.ajax({
+  url:'http://localhost:3000/waterbottles',
+  data: {
+    orderBy: $('#sortBySelector').val()
+  }
+}).done(function (response) {
+  console.log(response);
+  response.forEach(loadImage)
 })
-
-
-
+}
 
 
 function loadImage(bottle) {
