@@ -11,9 +11,6 @@ $(document).ready(function () {
 })
 
 
-
-
-
 function loadImage(bottle) {
   console.log(bottle);
   console.log("This is the array");
@@ -48,4 +45,14 @@ function loadImage(bottle) {
 
   columnDiv.append(thumbnailDiv)
   $("#waterbottles").append(columnDiv)
+}
+
+
+
+
+function sortPrice() {
+  $('caption').each(function () {
+    var data1=$(this).find(".cost").text();
+    $(this).attr('', data1);
+  });
 }
