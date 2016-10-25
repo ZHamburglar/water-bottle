@@ -44,7 +44,6 @@ function loadImage(bottle) {
   var p = $('<p />')
   p.append('<strong>ph level: </strong>')
   p.append(bottle.phLevel)
-
   var p2= $('<p />')
   p2.append('<strong>Cost: </strong>$')
   p2.append(bottle.cost)
