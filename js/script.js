@@ -31,7 +31,7 @@ function loadImage(bottle) {
   thumbnailDiv.addClass('thumbnail foo')
 
   var img = $('<img />')
-  img.attr('src', 'http://localhost:3000/images/')
+  img.attr('src', 'http://localhost:3000/images/'+ bottle.imageName )
 
   var captionDiv=$('<div />')
   captionDiv.addClass('caption')
