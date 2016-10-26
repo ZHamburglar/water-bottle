@@ -6,8 +6,29 @@ $(document).ready(function () {
     // slider()
   });
 // loadImage();
-loadBottles();
+  initSlider()
+  loadBottles();
 });
+
+function initSlider() {
+  $(function slider() {
+    $("#slider-range").slider({
+      range: true,
+      min: 1,
+      max: 14,
+      values: [ 1, 14 ],
+      slide: function( event, ui ) {
+        console.log('ui', ui);
+        var values = ui.values;
+        $('#minLevel').val(ui.values[0])
+        $('#maxLevel').val(ui.values[1])
+
+      }
+    });
+    $('#minLevel').val(1)
+    $('#maxLevel').val(14)
+  });
+}
 
 
 // $(function slider() {
@@ -24,43 +45,35 @@ loadBottles();
 // " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 // });
 
-$(function slider() {
-  $("#slider-range").slider({
-    range: true,
-    min: 1,
-    max: 14,
-    values: [ 0, 14 ],
-    slide: function( event, ui ) {
-  $( "#level" ).val(ui.values[ 0 ] + " " + ui.values[ 1 ] );
-  }
-});
-$( "#level" ).val($( "#slider-range" ).slider( "values", 0 ) +
-" - " + $( "#slider-range" ).slider( "values", 1 ) );
-});
+
 
 function loadBottles(){
+var levels = $("#level").val()
+console.log(levels, "levels");
+console.log($("#slider-range").val());
 $.ajax({
-  url:'https://waterbottle.herokuapp.com/waterbottles',
+  url:'http://localhost:3000/waterbottles',
   data: {
-    orderBy: $('#sortBySelector').val()
+    orderBy: $('#sortBySelector').val(),
+
   }
 }).done(function (response) {
-  console.log(response);
+  // console.log(response);
   response.forEach(loadImage)
 })
 }
 
 
 function loadImage(bottle) {
-  console.log(bottle);
-  console.log("This is the array");
+  // console.log(bottle);
+  // console.log("This is the array");
   var columnDiv =$('<div />')
   columnDiv.addClass('col-sm-6 col-md-4')
   var thumbnailDiv= $('<div />')
   thumbnailDiv.addClass('thumbnail foo')
 
   var img = $('<img />')
-  img.attr('src', 'https://waterbottle.herokuapp.com/waterbottles/images'+ bottle.imageName )
+  img.attr('src', 'http://localhost:3000/images/'+ bottle.imageName )
 
   var captionDiv=$('<div />')
   captionDiv.addClass('caption')
