@@ -6,7 +6,7 @@
     <title>Water Bottle Project</title>
     <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -31,8 +31,10 @@
 
          <div id="slideBar">
            <p>
-             <label for="level">PH level:</label>
-             <input type="text" id="level" readonly style="border:0; color: blue; font-weight:bold;">
+             <label for="minLevel">Min PH level:</label>
+             <input type="text" id="minLevel" readonly style="border:0; color: blue; font-weight:bold;" value="1">
+             <label for="maxLevel">Max PH level:</label>
+             <input type="text" id="maxLevel" readonly style="border:0; color: blue; font-weight:bold;" value="14">
            </p>
          </div>
 
