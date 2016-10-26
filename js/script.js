@@ -10,7 +10,7 @@ loadBottles();
 
 function loadBottles(){
 $.ajax({
-  url:'http://localhost:3000/waterbottles',
+  url:'https://waterbottle.herokuapp.com/waterbottles',
   data: {
     orderBy: $('#sortBySelector').val()
   }
@@ -30,7 +30,7 @@ function loadImage(bottle) {
   thumbnailDiv.addClass('thumbnail foo')
 
   var img = $('<img />')
-  img.attr('src', 'http://localhost:3000/images/'+ bottle.imageName )
+  img.attr('src', 'https://waterbottle.herokuapp.com/waterbottles/images/'+ bottle.imageName )
 
   var captionDiv=$('<div />')
   captionDiv.addClass('caption')
