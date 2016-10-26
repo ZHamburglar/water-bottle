@@ -25,26 +25,28 @@ function initSlider() {
         loadBottles();
       }
     });
-    $('#minLevel').val(1)
-    $('#maxLevel').val(14)
   });
 }
 
 function loadBottles(){
-var levels = $("#level").val()
-console.log(levels, "levels");
-console.log($("#slider-range").val());
-$.ajax({
-  url:'http://localhost:3000/waterbottles',
-  data: {
-    orderBy: $('#sortBySelector').val(),
-    minPhLevel:$('#minLevel').val(),
-    maxPhLevel:$('#maxLevel').val()
-  }
-}).done(function (response) {
-  // console.log(response);
-  response.forEach(loadImage)
-})
+  console.log('loadBottles');
+  console.log('minLevel', $('#minLevel').val());
+  console.log('maxLevel', $('#maxLevel').val());
+  $.ajax({
+    url:'http://localhost:3000/waterbottles',
+    data: {
+      orderBy: $('#sortBySelector').val(),
+      minPhLevel:$('#minLevel').val(),
+      maxPhLevel:$('#maxLevel').val()
+    }
+  }).done(function (response) {
+    // console.log(response);
+    $('#waterbottles').empty()
+    
+
+
+    response.forEach(loadImage)
+  })
 }
 
 
