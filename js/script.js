@@ -3,10 +3,27 @@ $(document).ready(function () {
     console.log($(this).val());
     $('#waterbottles').empty()
     loadBottles();
+    // slider()
   });
 // loadImage();
 loadBottles();
 });
+
+
+$(function slider() {
+  $("#slider-range").slider({
+    range: true,
+    min: 1,
+    max: 14,
+    values: [ 0, 14 ],
+    slide: function( event, ui ) {
+  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+  }
+});
+$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+" - $" + $( "#slider-range" ).slider( "values", 1 ) );
+});
+
 
 function loadBottles(){
 $.ajax({
@@ -30,7 +47,7 @@ function loadImage(bottle) {
   thumbnailDiv.addClass('thumbnail foo')
 
   var img = $('<img />')
-  img.attr('src', 'https://waterbottle.herokuapp.com/waterbottles/images/'+ bottle.imageName )
+  img.attr('src', 'https://waterbottle.herokuapp.com/waterbottles/images'+ bottle.imageName )
 
   var captionDiv=$('<div />')
   captionDiv.addClass('caption')
