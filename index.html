@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Water Bottle Project</title>
+    <title>Water you Drinking?</title>
     <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
@@ -16,20 +19,20 @@
   <body>
 
 
-
-    <div class="navSection col-md-2">
+    <!-- <div class="navSection col-md-2">
       <ul class="nav nav-pills nav-stacked navbar navbar-fixed-top">
         <li><a href="#">Home</a></li>
         <li><a href="./health.html">Health</a></li>
         <li><a href="./waterSource.html">Water Sources</a></li>
       </ul>
-    </div>
+    </div> -->
     <div class="container">
-      <div class="mainSection col-md-10">
-        <h1>Water Bottles</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis animi mollitia suscipit explicabo, et labore doloribus natus similique eaque soluta nemo eum nam reprehenderit officiis iusto tenetur ab ut voluptate!</p>
+      <!-- <canvas id="myCanvas" class="col-md-12"></canvas>
+      <script type="text/javascript" src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script> -->
+      <div class="mainSection col-md-12">
+        <p>pH is a measure of how acidic/basic water is. The range goes from 0 - 14, with 7 being neutral. pHs of less than 7 indicate acidity, whereas a pH of greater than 7 indicates a base. pH is really a measure of the relative amount of free hydrogen and hydroxyl ions in the water. Water that has more free hydrogen ions is acidic, whereas water that has more free hydroxyl ions is basic. Since pH can be affected by chemicals in the water, pH is an important indicator of water that is changing chemically. pH is reported in "logarithmic units". Each number represents a 10-fold change in the acidity/basicness of the water. Water with a pH of five is ten times more acidic than water having a pH of six.</p>
 
-         <div id="slideBar">
+         <div id="slideBar" class="col-md-12">
            <p>
              <label for="minLevel">Min PH level:</label>
              <input type="text" id="minLevel" readonly style="border:0; color: blue; font-weight:bold;" value="1">
