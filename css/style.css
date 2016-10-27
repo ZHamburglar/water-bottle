@@ -17,12 +17,24 @@ div.thumbnail img{
 
 div.thumbnail {
    max-width:  286px;
+   box-shadow: 0px 0px 10px #000066;
    height: 350px;
-
 }
 
 div.caption {
   position: absolute;
   bottom: 10px;
   left: 20px;
+}
+
+body{
+  background-image: url('../images/clean-water.jpg');
+  background-size: 100%;
+  background-attachment: fixed;
+  position:sticky;
+
+}
+
+canvas {
+  font-style: italic;
 }
