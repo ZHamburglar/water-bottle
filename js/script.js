@@ -31,7 +31,7 @@ function loadBottles(){
   console.log('minLevel', $('#minLevel').val());
   console.log('maxLevel', $('#maxLevel').val());
   $.ajax({
-    url:'https://thomasfoster90.github.io/water-bottle//waterbottles',
+    url:'https://thomasfoster90.github.io/water-bottle/waterbottles',
     data: {
       orderBy: $('#sortBySelector').val(),
       minPhLevel:$('#minLevel').val(),
@@ -77,7 +77,7 @@ function loadImage(bottle) {
   thumbnailDiv.addClass('thumbnail foo')
 
   var img = $('<img />')
-  img.attr('src', 'https://thomasfoster90.github.io/water-bottle//images/'+ bottle.imageName )
+  img.attr('src', 'https://thomasfoster90.github.io/water-bottle/images/'+ bottle.imageName )
 
   var captionDiv=$('<div />')
   captionDiv.addClass('caption')
