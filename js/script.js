@@ -3,9 +3,7 @@ $(document).ready(function () {
     console.log($(this).val());
     $('#waterbottles').empty()
     loadBottles();
-    // slider()
   });
-// loadImage();
   initSlider()
   loadBottles();
 });
