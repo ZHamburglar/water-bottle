@@ -77,7 +77,8 @@ function loadImage(bottle) {
   thumbnailDiv.addClass('thumbnail foo')
 
   var img = $('<img />')
-  img.attr('src', 'https://thomasfoster90.github.io/water-bottle/images/'+ bottle.imageName )
+  img.attr('src', 'https://git.heroku.com/waterbottle.git
+/images/'+ bottle.imageName )
 
   var captionDiv=$('<div />')
   captionDiv.addClass('caption')
