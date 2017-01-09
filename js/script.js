@@ -31,7 +31,7 @@ function loadBottles(){
   console.log('minLevel', $('#minLevel').val());
   console.log('maxLevel', $('#maxLevel').val());
   $.ajax({
-    url:'https://waterbottle.herokuapp.com/waterbottles',
+    url:'https://young-island-76725.herokuapp.com/waterbottles',
     data: {
       orderBy: $('#sortBySelector').val(),
       minPhLevel:$('#minLevel').val(),
@@ -77,7 +77,7 @@ function loadImage(bottle) {
   thumbnailDiv.addClass('thumbnail foo')
 
   var img = $('<img />')
-  img.attr('src','https://waterbottle.herokuapp.com/images/'+ bottle.imageName )
+  img.attr('src','https://young-island-76725.herokuapp.com/images/'+ bottle.imageName )
 
   var captionDiv=$('<div />')
   captionDiv.addClass('caption')
